@@ -1,5 +1,4 @@
 ## Table of Contents
-
 - Data Source
 - Dataset
 - Database Tables
@@ -9,11 +8,45 @@
 - Recommendations
 
 ## Data Source
+This toy store database is sourced from Maven Analytics.
+- **Dataset:** Toy Store Database 
+- **Provider:** [Maven Analytics](https://mavenanalytics.io/data-playground/toy-store-e-commerce-database)
+- **Tool:** PostgreSQL
+- **Project Overview:** This repo analyzes a synthetic toy store database from Maven Analytics to uncover sales patterns, assess product profitability, and identify refund drivers.
+- **Skills Demonstrated:** SQL querying, data cleaning, exploratory analysis
+- **Setup Instructions:** Load data into PostgreSQL via pgAdmin: `CREATE DATABASE toystore_db;` then import CSVs from Maven Analytics.
 
-This Toy store database is sourced from Maven Analytics.
-- Dataset: Hospital Patient Records  
-- Provider: [Maven Analytics](https://mavenanalytics.io/data-playground/toy-store-e-commerce-database)
-- Tool: PostgreSQL.
-- Project Overview: This repo analyzes a synthetic Toy store database from Maven Analytics to uncover insights on products,orders,sales, revenu and refund.
-- Skills demonstrated: SQL querying, data cleaning, exploratory analysis."
-- Setup Instructions: How to replicate (e.g., "Load data into PostgreSQL via pgAdmin: CREATE DATABASE Toystore_db; then import CSVs from Maven.").
+## Data Tables 
+
+### Products Table
+We have a total of 4 products:
+1. The Original Mr. Fuzzy
+2. The Forever Love Bear
+3. The Birthday Sugar Panda
+4. The Hudson River Mini Bear
+```sql
+SELECT * FROM products;
+```
+
+### Orders Table
+```sql
+SELECT * FROM orders LIMIT 10;
+```
+We have a total of 32,313 orders.
+```sql
+SELECT COUNT(orders.order_id) AS Total_Orders FROM orders;
+```
+
+### Order Item Refunds
+```sql
+SELECT * FROM order_item_refunds LIMIT 10;
+```
+We have a total of 1,731 refunds since the store launched.
+```sql
+SELECT COUNT(order_item_refund_id) FROM order_item_refunds;
+```
+
+### Website Pageviews
+```sql
+SELECT * FROM website_pageviews LIMIT 10;
+```
