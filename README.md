@@ -37,6 +37,16 @@ We have a total of 32,313 orders.
 SELECT COUNT(orders.order_id) AS Total_Orders FROM orders;
 ```
 
+### Order Items
+```sql
+SELECT count(*) FROM order_items;
+```
+We have a total of 40025 items orderd.
+
+```sql
+SELECT COUNT(*) FROM order_items;
+```
+
 ### Order Item Refunds
 ```sql
 SELECT * FROM order_item_refunds LIMIT 10;
@@ -50,3 +60,16 @@ SELECT COUNT(order_item_refund_id) FROM order_item_refunds;
 ```sql
 SELECT * FROM website_pageviews LIMIT 10;
 ```
+WE have a total of 1188124 page views;
+```sql
+SELECT COUNT(website_session_id) FROM website_pageviews;
+```
+### Website Sessions
+```sql
+SELECT * FROM website_sessions LIMIT 10;
+```
+We have 472871 website sesstions.
+```sql
+SELECT COUNT(*) FROM website_sessions;
+```
+
