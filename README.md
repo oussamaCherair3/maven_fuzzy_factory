@@ -1,2 +1,2 @@
-# maven_fuzzy_factory
-ecommarce DB
+## Project Background
+E-Commerce database for Maven Fuzzy Factory, an online retailer that sells teddy bears. It includes detailed marketing data on website sessions and pageviews by user, as well as their orders and returns. Perfect for analyzing and optimizing marketing channels, measuring and testing website conversion performance, and understanding the impact of new product launches.
